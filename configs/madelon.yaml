@@ -1,0 +1,21 @@
+dataset: "madelon"
+target_column: "target"
+
+# CV
+k_folds: 5
+feature_counts: [5, 20]
+
+# siatka eksperymentu
+noise_levels: [0.0, 0.1, 0.25, 0.5, 1.0]
+binning_methods: ["none", "static", "quantile", "kmeans"]
+feature_methods: ["elastic_net", "rf", "xgb", "frfs"]
+classifiers: ["random_forest", "xgboost", "svm", "logistic_regression"]
+
+# hiperparametry
+hparams_dir: "hparams"
+
+# strumieniowanie (opcjonalnie)
+stream_summary_csv: "results/madelon_stream_summary.csv"
+
+# zapis końcowy
+output_csv: "results/madelon_summary.csv"

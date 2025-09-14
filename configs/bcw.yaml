@@ -1,0 +1,17 @@
+dataset: "breast_cancer_wisconsin"
+target_column: "target"
+
+k_folds: 5
+feature_counts: [5, 10, 15]
+
+noise_levels: [0.0, 0.1, 0.25, 0.5, 1.0]
+binning_methods: ["none", "static", "quantile", "kmeans"]
+feature_methods: ["frfs", "elastic_net", "rf", "xgb"]
+classifiers: ["random_forest", "xgboost", "svm", "logistic_regression"]
+
+hparams_dir: "hparams"
+
+stream_summary_csv: "results/bcw_stream_summary.csv"
+
+output_csv: "results/bcw_summary.csv"
+output_prefix: "results/bcw"
